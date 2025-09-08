@@ -6,19 +6,32 @@ import {
   MagnifyingGlassIcon,
   BellIcon,
   Cog6ToothIcon,
+  Bars3Icon,
 } from "@heroicons/react/24/outline";
+import Image from "next/image";
 
-export default function AppHeader() {
+type AppHeaderProps = {
+  onSidebarToggle?: () => void;
+};
+
+export default function AppHeader({ onSidebarToggle }: AppHeaderProps) {
   const [showModal, setShowModal] = useState(false);
   const [search, setSearch] = useState("");
   const [showNotifications, setShowNotifications] = useState(false);
   const [newBoardName, setNewBoardName] = useState("");
 
   return (
-    <header className="w-full bg-white flex items-center justify-between px-6 py-3 border-b">
+    <header className="w-full bg-white flex items-center justify-between px-4 md:px-6 py-3 border-b">
+      <button
+        className="md:hidden mr-2 p-2 rounded hover:bg-gray-100"
+        onClick={onSidebarToggle}
+        aria-label="Open sidebar"
+      >
+        <Bars3Icon className="w-6 h-6 text-gray-700" />
+      </button>
       <div className="flex items-center gap-2">
-        <div className="w-7 h-7 rounded bg-blue-100 flex items-center justify-center">
-          <span className="text-blue-600 font-bold text-lg">▦</span>
+        <div className="w-6 h-6 rounded flex items-center justify-center">
+          <Image src="/images/logo.png" alt="Logo" width={200} height={100} />
         </div>
         <span className="font-bold text-gray-900 text-lg">
           Board <span className="text-blue-600">App</span>
@@ -27,7 +40,7 @@ export default function AppHeader() {
 
       <div className="flex items-center gap-4 flex-1 justify-end">
         <button
-          className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-2 rounded-lg shadow transition"
+          className="hidden sm:flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-2 rounded-lg shadow transition"
           onClick={() => {}}
         >
           Create new board
@@ -63,7 +76,7 @@ export default function AppHeader() {
           </div>
         )}
 
-        <div className="relative">
+        <div className="relative hidden sm:block">
           <MagnifyingGlassIcon className="w-5 h-5 text-gray-400 absolute left-3 top-1/2 -translate-y-1/2" />
           <input
             type="text"
@@ -75,7 +88,7 @@ export default function AppHeader() {
         </div>
 
         <button
-          className="p-2 rounded-full hover:bg-gray-100 transition"
+          className="p-2 rounded-full hover:bg-gray-100 transition hidden sm:inline-flex"
           title="Filters"
         >
           <Cog6ToothIcon className="w-5 h-5 text-gray-400" />
@@ -100,7 +113,7 @@ export default function AppHeader() {
         </div>
 
         <button
-          className="ml-2 p-1 rounded-full bg-gray-100 hover:bg-gray-200 transition"
+          className="ml-2 p-1 rounded-full bg-gray-100 hover:bg-gray-200 transition hidden sm:inline-flex"
           title="Profile"
         >
           <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gray-300 text-gray-700 font-bold">

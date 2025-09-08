@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { DndContext, DragEndEvent } from "@dnd-kit/core";
 import { useTasks } from "../store/useTasks";
 import StatusColomn from "@/components/StatusColomn";
+import SearchBar from "@/components/SearchBar";
 
 const STATUS = [
   { key: "todo", label: "To Do" },
@@ -40,6 +41,7 @@ export default function Home() {
   return (
     <main className="p-6 bg-gray-100 min-h-screen">
       <h1 className="text-2xl font-bold mb-6">Board App Dashboard</h1>
+      <SearchBar />
       <DndContext onDragEnd={handleDragEnd}>
         <div className="flex flex-col md:flex-row gap-4 overflow-x-auto">
           {STATUS.map((col) => (
