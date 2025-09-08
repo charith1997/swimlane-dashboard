@@ -1,0 +1,18 @@
+[
+  {
+    "id": "1",
+    "title": "User interview",
+    "status": "todo",
+    "category": "Research",
+    "priority": "low",
+    "dueDate": "2022-04-05"
+  },
+  {
+    "id": "2",
+    "title": "UI Design",
+    "status": "inprogress",
+    "category": "Design",
+    "priority": "high",
+    "dueDate": "2022-04-06"
+  }
+]

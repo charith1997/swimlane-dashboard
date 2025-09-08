@@ -1,5 +1,6 @@
 import AppHeader from "@/components/AppHeader";
 import "./globals.css";
+import Sidebar from "@/components/Sidebar";
 
 export default function RootLayout({
   children,
@@ -10,7 +11,10 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <AppHeader />
-        <main>{children}</main>
+        <div className="flex">
+          <Sidebar />
+          <main className="flex-1">{children}</main>
+        </div>
       </body>
     </html>
   );
