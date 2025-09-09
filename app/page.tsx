@@ -28,7 +28,7 @@ export default function Home() {
     if (over && active.data.current?.task) {
       const newStatus = over.id as string;
       if (active.data.current.task.status !== newStatus) {
-  moveTask(active.id as string, newStatus as Task["status"]);
+        moveTask(active.id as string, newStatus as Task["status"]);
       }
     }
   };
@@ -41,9 +41,9 @@ export default function Home() {
 
   return (
     <main className="p-6 bg-gray-100">
-      <div className="flex items-center mb-2 gap-4">
+      <div className="flex flex-col md:flex-row md:items-center mb-2 gap-4">
         <h1 className="text-2xl font-bold">Sport XI Project</h1>
-        <span className="text-sm text-gray-500 bg-amber-400 px-1 rounded">
+        <span className="text-sm text-gray-500 bg-amber-400 px-1 rounded w-fit">
           In progress
         </span>
       </div>

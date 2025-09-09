@@ -27,7 +27,7 @@ export default function StatusColomn({ title, status, tasks }: Props) {
   return (
     <div
       ref={setNodeRef}
-      className={`flex-1 min-w-[90vw] md:min-w-[250px] bg-gray-50 rounded p-3 mx-0 md:mx-2 mb-4 md:mb-0 transition ${
+      className={`flex-1 md:min-w-[250px] bg-gray-50 rounded p-3 mx-0 md:mx-2 mb-4 md:mb-0 transition ${
         isOver ? "ring-2 ring-blue-400" : ""
       }`}
     >

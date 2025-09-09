@@ -46,5 +46,77 @@
 		"category": "Design",
 		"priority": "high",
 		"dueDate": "2022-04-06"
+	},
+    {
+		"id": "7",
+		"title": "Check clients feedback",
+		"status": "approved",
+		"category": "feedback",
+		"priority": "low",
+		"dueDate": "2022-04-05"
+	},
+	{
+		"id": "8",
+		"title": "Copyright",
+		"status": "reject",
+		"category": "Presentation",
+		"priority": "medium",
+		"dueDate": "2022-04-06"
+	},
+    {
+		"id": "9",
+		"title": "Speech",
+		"status": "todo",
+		"category": "Other",
+		"priority": "medium",
+		"dueDate": "2022-04-05"
+	},
+	{
+		"id": "10",
+		"title": "Slider Controls",
+		"status": "approved",
+		"category": "Design",
+		"priority": "high",
+		"dueDate": "2022-04-06"
+	},
+    {
+		"id": "11",
+		"title": "User interview - 2",
+		"status": "reject",
+		"category": "Research",
+		"priority": "low",
+		"dueDate": "2022-04-05"
+	},
+	{
+		"id": "12",
+		"title": "UI Design",
+		"status": "inprogress",
+		"category": "Design",
+		"priority": "high",
+		"dueDate": "2022-04-06"
+	},
+    {
+		"id": "13",
+		"title": "Group Management",
+		"status": "reject",
+		"category": "Other",
+		"priority": "low",
+		"dueDate": "2022-04-06"
+	},
+    {
+		"id": "14",
+		"title": "Design System",
+		"status": "todo",
+		"category": "Design",
+		"priority": "medium",
+		"dueDate": "2022-04-05"
+	},
+	{
+		"id": "15",
+		"title": "Wireframe",
+		"status": "approved",
+		"category": "Design",
+		"priority": "high",
+		"dueDate": "2022-04-06"
 	}
 ]
