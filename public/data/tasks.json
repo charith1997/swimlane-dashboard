@@ -17,64 +17,32 @@
 	},
     {
 		"id": "3",
-		"title": "User interview",
-		"status": "todo",
+		"title": "Prototype",
+		"status": "approved",
 		"category": "Research",
-		"priority": "low",
+		"priority": "medium",
 		"dueDate": "2022-04-05"
 	},
 	{
 		"id": "4",
-		"title": "UI Design",
-		"status": "inprogress",
-		"category": "Design",
-		"priority": "high",
+		"title": "Group Management",
+		"status": "reject",
+		"category": "Other",
+		"priority": "low",
 		"dueDate": "2022-04-06"
 	},
     {
 		"id": "5",
-		"title": "User interview",
+		"title": "Design System",
 		"status": "todo",
-		"category": "Research",
-		"priority": "low",
+		"category": "Design",
+		"priority": "medium",
 		"dueDate": "2022-04-05"
 	},
 	{
 		"id": "6",
-		"title": "UI Design",
-		"status": "inprogress",
-		"category": "Design",
-		"priority": "high",
-		"dueDate": "2022-04-06"
-	},
-    {
-		"id": "7",
-		"title": "User interview",
-		"status": "todo",
-		"category": "Research",
-		"priority": "low",
-		"dueDate": "2022-04-05"
-	},
-	{
-		"id": "8",
-		"title": "UI Design",
-		"status": "inprogress",
-		"category": "Design",
-		"priority": "high",
-		"dueDate": "2022-04-06"
-	},
-    {
-		"id": "9",
-		"title": "User interview",
-		"status": "todo",
-		"category": "Research",
-		"priority": "low",
-		"dueDate": "2022-04-05"
-	},
-	{
-		"id": "10",
-		"title": "UI Design",
-		"status": "inprogress",
+		"title": "Wireframe",
+		"status": "approved",
 		"category": "Design",
 		"priority": "high",
 		"dueDate": "2022-04-06"
