@@ -2,13 +2,13 @@ import React from "react";
 
 interface ButtonProps {
   onClick?: () => void;
-  label?: string;
-  classname?: string;
+  label?: string | React.ReactNode;
+  className?: string;
 }
 
-function Button({ onClick, label, classname }: ButtonProps) {
+function Button({ onClick, label, className }: ButtonProps) {
   return (
-    <button onClick={onClick} className={classname}>
+    <button onClick={onClick} className={`cursor-pointer ${className}`}>
       {label}
     </button>
   );

@@ -18,7 +18,12 @@ export default function RootLayout({
         <AppHeader onSidebarToggle={() => setSidebarOpen(true)} />
         <div className="flex">
           <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-          <main className="flex-1">{children}</main>
+          <main
+            className="flex-1 overflow-y-auto"
+            style={{ maxHeight: "calc(100vh - 65px)" }}
+          >
+            {children}
+          </main>
         </div>
       </body>
     </html>
