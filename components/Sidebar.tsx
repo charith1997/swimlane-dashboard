@@ -1,8 +1,6 @@
 "use client";
 
 import {
-  HomeIcon,
-  ClipboardDocumentListIcon,
   ChatBubbleLeftRightIcon,
   CalendarDaysIcon,
   UsersIcon,
@@ -11,7 +9,6 @@ import {
   FolderOpenIcon,
   ChevronDownIcon,
   ChevronRightIcon,
-  PlusIcon,
   XMarkIcon,
   Squares2X2Icon,
 } from "@heroicons/react/24/outline";

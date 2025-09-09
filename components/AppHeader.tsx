@@ -5,12 +5,10 @@ import {
   PlusIcon,
   MagnifyingGlassIcon,
   BellIcon,
-  Cog6ToothIcon,
   Bars3Icon,
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Button from "./Button";
-import { useTasks } from "@/store/useTasks";
 import SearchBar from "./SearchBar";
 
 type AppHeaderProps = {
@@ -19,10 +17,6 @@ type AppHeaderProps = {
 
 export default function AppHeader({ onSidebarToggle }: AppHeaderProps) {
   const [showModal, setShowModal] = useState(false);
-  const [showNotifications, setShowNotifications] = useState(false);
-  const [newBoardName, setNewBoardName] = useState("");
-  const search = useTasks((s) => s.search);
-  const setSearch = useTasks((s) => s.setSearch);
 
   return (
     <header className="w-full bg-white flex items-center justify-between px-4 md:px-6 py-3 border-b border-gray-200">
@@ -59,8 +53,8 @@ export default function AppHeader({ onSidebarToggle }: AppHeaderProps) {
               <input
                 className="w-full border rounded px-3 py-2 mb-4"
                 placeholder="Board name"
-                value={newBoardName}
-                onChange={(e) => {}}
+                value=""
+                onChange={() => {}}
                 autoFocus
               />
               <div className="flex justify-end gap-2">
@@ -105,13 +99,6 @@ export default function AppHeader({ onSidebarToggle }: AppHeaderProps) {
               </>
             }
           />
-
-          {showNotifications && (
-            <div className="absolute right-0 mt-2 w-64 bg-white shadow-lg rounded-lg p-4 z-50">
-              <div className="font-semibold mb-2">Notifications</div>
-              <div className="text-sm text-gray-500">No new notifications.</div>
-            </div>
-          )}
         </div>
 
         <Button

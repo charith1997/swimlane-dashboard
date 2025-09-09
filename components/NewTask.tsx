@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { PlusCircleIcon, XMarkIcon } from "@heroicons/react/24/solid";
+import { XMarkIcon } from "@heroicons/react/24/solid";
 import { useTasks, Task } from "../store/useTasks";
 import Button from "./Button";
 
@@ -66,7 +66,7 @@ export default function NewTask({ status, onClose }: Props) {
         <select
           className="w-full border rounded px-3 py-2 mb-3 focus:outline-none focus:ring-2 focus:ring-blue-200"
           value={priority}
-          onChange={(e) => setPriority(e.target.value as any)}
+          onChange={(e) => setPriority(e.target.value as "low" | "medium" | "high")}
         >
           <option value="low">Low</option>
           <option value="medium">Medium</option>

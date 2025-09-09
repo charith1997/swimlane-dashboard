@@ -1,10 +1,10 @@
 "use client";
 import { useEffect } from "react";
 import { DndContext, DragEndEvent } from "@dnd-kit/core";
-import { useTasks } from "../store/useTasks";
+import { useTasks, Task } from "../store/useTasks";
 import StatusColomn from "@/components/StatusColomn";
 import Image from "next/image";
-import { MagnifyingGlassIcon, PencilIcon } from "@heroicons/react/24/outline";
+import { PencilIcon } from "@heroicons/react/24/outline";
 
 const STATUS = [
   { key: "todo", label: "To Do" },
@@ -28,7 +28,7 @@ export default function Home() {
     if (over && active.data.current?.task) {
       const newStatus = over.id as string;
       if (active.data.current.task.status !== newStatus) {
-        moveTask(active.id as string, newStatus as any);
+  moveTask(active.id as string, newStatus as Task["status"]);
       }
     }
   };
